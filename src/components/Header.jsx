@@ -26,7 +26,7 @@ const Header = () => {
     ];
     return (
         <header>
-            <div className="bg-[#38CB89] flex justify-center text-xs md:text-base items-center gap-x-3 py-2 text-black">
+            <div className="bg-bg-highlight flex justify-center text-xs md:text-base items-center gap-x-3 py-2 text-black">
                 <p className="font-semibold flex   gap-x-2">
                     <img src="/assets/icons/percent.svg" alt="percent_image" />
                     30% off storewide — Limited time!
@@ -39,8 +39,8 @@ const Header = () => {
                     />
                 </p>
             </div>
-            <div className="bg-[#F7F7FB]">
-                <div className="flex   w-[90%] mx-auto justify-between items-center py-4">
+            <div className="bg-bg-primery">
+                <div className="flex w-[90%] mx-auto justify-between items-center py-4">
                     <Image
                         src={"/assets/logos/logo2.png"}
                         alt="company-logo"
@@ -52,7 +52,7 @@ const Header = () => {
                         {navLinks.map(({ href, name }) => (
                             <Link
                                 key={name}
-                                className="text-xl text-[#141718] font-medium font-sans hidden md:block"
+                                className="text-xl text-black font-medium font-sans hidden md:block"
                                 href={href}
                             >
                                 {name}
@@ -73,13 +73,13 @@ const Header = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="md:hidden absolute z-50 w-full bg-[#F7F7FB] px-4 py-6 shadow-md ">
+                <div className="md:hidden absolute z-50 w-full bg-bg-primery px-4 py-6 shadow-md ">
                     <nav className="flex flex-col items-center gap-6 text-lg font-medium">
                         {navLinks.map(({ href, name }) => (
                             <Link
                                 key={name}
                                 href={href}
-                                className="text-[#141718]"
+                                className="text-black"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {name}

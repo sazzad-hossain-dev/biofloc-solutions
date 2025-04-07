@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+    --color-bg-primery: #F7F7FB;
+    --color-bg-highlight: #38CB89;
+}
+
+@layer base {
+    h1 {
+        @apply text-[min(48px,6vw)] font-black leading-tight;
+    }
+
+    h4 {
+        @apply text-[min(28px,4vw)] font-bold leading-snug ;
+    }
+}
+.max-container {
+    @apply w-[90%] mx-auto;
+}
+
+.flex-center {
+    @apply flex justify-center items-center;
+}

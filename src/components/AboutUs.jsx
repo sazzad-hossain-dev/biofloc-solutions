@@ -2,16 +2,15 @@ import Image from "next/image";
 
 const AboutUs = () => {
     return (
-        <section className="bg-[#F7F7FB] py-20">
-            <div className="w-[90%] mx-auto">
-                <h1 className="text-[#170F49] text-center text-[min(48px,6vw)] font-extrabold mb-16">
+        <section className="bg-bg-primery py-20">
+            <div className="max-container">
+                <h1 className="text-[#170F49] text-center  mb-16">
                     আমাদের সম্পর্কে - BioFloc Solutions
                 </h1>
 
                 <div className="flex flex-col-reverse md:flex-row items-start gap-12">
-                    {/* Text Content */}
                     <div className="md:w-1/2">
-                        <h4 className="text-[#170F49] text-[min(28px,4vw)]  font-bold  mb-6 text-center leading-snug">
+                        <h4 className="text-[#170F49] mb-6 text-center ">
                             টেকসই বায়োফ্লক চাষের মাধ্যমে অ্যাকোয়াকালচারের
                             বিপ্লব
                         </h4>
@@ -47,8 +46,6 @@ const AboutUs = () => {
                             তুলি—টেকসই, লাভজনক ও পরিবেশবান্ধব!
                         </p>
                     </div>
-
-                    {/* Image Section */}
                     <div className="md:w-1/2 w-full">
                         <div className="rounded-xl overflow-hidden shadow-lg">
                             <Image
