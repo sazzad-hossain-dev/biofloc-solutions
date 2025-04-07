@@ -159,7 +159,7 @@ const Products = () => {
                 <h1 className="text-center text-[#170F49] py-20">
                     আমাদের পণ্যসমূহ
                 </h1>
-                <div className="max-container flex flex-wrap justify-center gap-x-8">
+                <div className="max-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
                     {OurProductsData.map(
                         ({ image, title, model, price }, index) => (
                             <OurProductCard
@@ -178,7 +178,7 @@ const Products = () => {
             </section>
             <section id="feature">
                 <h1 className="text-center text-[#170F49] py-20">Featured</h1>
-                <div className="max-container grid grid-cols-3  place-items-center">
+                <div className="max-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
                     {OurProductsData.map(
                         ({ title, image, model, price }, index) => (
                             <FeatureCard
@@ -196,7 +196,7 @@ const Products = () => {
                 <h1 className="text-center text-[#170F49] py-20">
                     Shop by Categories
                 </h1>
-                <div className="max-container grid-cols-3 grid place-items-center">
+                <div className="max-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
                     {categoryProductsData.map(({ image, name }, index) => (
                         <CategoryCard key={index} image={image} title={name} />
                     ))}
