@@ -3,6 +3,7 @@
 @theme {
     --color-bg-primery: #F7F7FB;
     --color-bg-highlight: #38CB89;
+    --color-primery-text:#170F49;
 }
 
 @layer base {

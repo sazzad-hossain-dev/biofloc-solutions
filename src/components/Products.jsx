@@ -156,7 +156,7 @@ const Products = () => {
         <div>
             {/* OUR PRODUCT DEMO */}
             <section id="our_products" className="bg-bg-primery">
-                <h1 className="text-center text-[#170F49] py-20">
+                <h1 className="text-center text-primery-text py-20">
                     আমাদের পণ্যসমূহ
                 </h1>
                 <div className="max-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
@@ -177,7 +177,9 @@ const Products = () => {
                 </div>
             </section>
             <section id="feature">
-                <h1 className="text-center text-[#170F49] py-20">Featured</h1>
+                <h1 className="text-center text-primery-text py-20">
+                    Featured
+                </h1>
                 <div className="max-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
                     {OurProductsData.map(
                         ({ title, image, model, price }, index) => (
@@ -193,7 +195,7 @@ const Products = () => {
                 </div>
             </section>
             <section id="shop-by-category">
-                <h1 className="text-center text-[#170F49] py-20">
+                <h1 className="text-center text-primery-text py-20">
                     Shop by Categories
                 </h1>
                 <div className="max-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">

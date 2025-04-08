@@ -4,13 +4,13 @@ const AboutUs = () => {
     return (
         <section className="bg-bg-primery py-20">
             <div className="max-container">
-                <h1 className="text-[#170F49] text-center  mb-16">
+                <h1 className="text-primery-text text-center  mb-16">
                     আমাদের সম্পর্কে - BioFloc Solutions
                 </h1>
 
                 <div className="flex flex-col-reverse md:flex-row items-start gap-12">
                     <div className="md:w-1/2">
-                        <h4 className="text-[#170F49] mb-6 text-center ">
+                        <h4 className="text-primery-text mb-6 text-center ">
                             টেকসই বায়োফ্লক চাষের মাধ্যমে অ্যাকোয়াকালচারের
                             বিপ্লব
                         </h4>
