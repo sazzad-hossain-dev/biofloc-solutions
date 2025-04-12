@@ -44,19 +44,23 @@ const Hero = () => {
     return (
         <div
             style={{ backgroundImage: `url(${heroData.bg})` }}
-            className="relative bg-cover bg-center min-h-screen w-full flex-center mt-6"
+            className="relative bg-cover bg-center min-h-screen w-full flex-center mt-25"
         >
             <div className="max-container flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-10">
                 <div className="w-full lg:w-1/2 text-white text-center lg:text-left space-y-6">
-                    <h1 className="drop-shadow-md">{heroData.title}</h1>
-                    <h4 className="drop-shadow">{heroData.description}</h4>
+                    <h1 className="drop-shadow-md font-noto">
+                        {heroData.title}
+                    </h1>
+                    <h4 className="drop-shadow font-noto">
+                        {heroData.description}
+                    </h4>
                 </div>
                 <div className="w-full lg:w-1/2 flex justify-center">
                     <div
                         style={{ backgroundImage: `url(${heroData.cardBg})` }}
                         className="relative bg-cover bg-center h-[300px] sm:h-[350px] w-[90%] sm:w-[80%] rounded-2xl shadow-2xl overflow-hidden transition-all duration-500"
                     >
-                        <div className="absolute bottom-5 inset-x-0 flex justify-center">
+                        <div className="absolute bottom-5 inset-x-0 font-noto flex justify-center">
                             <CustomBtn title={heroData.btnText} />
                         </div>
                     </div>

@@ -4,15 +4,28 @@
     --color-bg-primery: #F7F7FB;
     --color-bg-highlight: #38CB89;
     --color-primery-text:#170F49;
+
+    --font-poppins:"Poppins", "sans-serif";
+    --font-lato: "Lato",  "sans-serif";
+    --font-noto: "Noto Sans Bengali", "sans-serif";
+
+    --animate-fadein:fadein 0.5s ease-in-out forwards;
+    @keyframes fadein {
+        0%{ opacity: 0;}
+        100%{ opacity: 1;}
+    }
 }
 
 @layer base {
     h1 {
-        @apply text-[min(48px,6vw)] font-black leading-tight;
+        @apply text-[min(48px,6vw)] font-black leading-tight font-poppins;
     }
 
     h4 {
-        @apply text-[min(28px,4vw)] font-bold leading-snug ;
+        @apply text-[min(28px,4vw)] font-bold leading-snug font-poppins ;
+    }
+    p{
+        @apply font-lato;
     }
 }
 .max-container {
