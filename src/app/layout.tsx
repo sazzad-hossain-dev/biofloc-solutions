@@ -18,7 +18,7 @@ export default function RootLayout({
                 <div className="fixed top-0 w-full z-50 ">
                     <Header />
                 </div>
-                {children}
+                <div className="mt-30">{children}</div>
                 <Footer />
             </body>
         </html>

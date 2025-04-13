@@ -4,12 +4,19 @@ type productProps = {
     title: string;
     image: string;
     price: number;
+    slug: string;
     totalRating: number;
 };
-const ProductCard = ({ title, image, price, totalRating }: productProps) => {
+const ProductCard = ({
+    title,
+    image,
+    price,
+    totalRating,
+    slug,
+}: productProps) => {
     return (
         <Link
-            href="/product/bioair-pro-air-pump"
+            href={`/products/${slug}`}
             className="block bg-white  shadow hover:shadow-md transition duration-300 w-full "
         >
             <div className="relative w-full h-40 rounded-t-xl overflow-hidden group">

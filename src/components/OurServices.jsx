@@ -23,7 +23,7 @@ const OurServices = () => {
     ];
     const OurServiceCard = ({ image, title, description }) => {
         return (
-            <div className="w-100 text-center flex  items-center flex-col">
+            <div className="w-96 text-center flex  items-center flex-col">
                 <Image src={image} alt={title} height={100} width={300} />
                 <div>
                     <h4 className="py-4">{title}</h4>
