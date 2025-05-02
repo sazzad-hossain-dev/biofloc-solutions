@@ -3,13 +3,14 @@ import { productinfo } from "@/data";
 import { FaCartPlus } from "react-icons/fa";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-type Props = {
+// ✅ Correct PageProps type as required by Next.js App Router
+interface PageProps {
     params: {
         slug: string;
     };
-};
+}
 
-const ProductPage = async ({ params }: Props) => {
+const ProductPage = async ({ params }: PageProps) => {
     const { slug } = params;
 
     const product = productinfo.find((item) => item.slug === slug);
@@ -30,7 +31,7 @@ const ProductPage = async ({ params }: Props) => {
                     src={product.imageUrl}
                     alt={product.title}
                     fill
-                    className="rounded-xl"
+                    className="rounded-xl object-cover"
                     priority
                 />
             </div>
