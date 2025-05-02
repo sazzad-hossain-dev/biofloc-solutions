@@ -5,14 +5,10 @@ import { productinfo } from "@/data";
 import { FaCartPlus } from "react-icons/fa";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-interface PageProps {
-    params: {
-        slug: string;
-    };
-}
+type Params = { params: Promise<{ slug: string }> };
 
-export default function ProductPage({ params }: PageProps) {
-    const { slug } = params;
+export default async function ProductPage({ params }: Params) {
+    const { slug } = await params;
     const product = productinfo.find((item) => item.slug === slug);
 
     if (!product) {
