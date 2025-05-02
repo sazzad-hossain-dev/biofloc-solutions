@@ -9,7 +9,7 @@ type Props = {
     };
 };
 
-const ProductPage = ({ params }: Props) => {
+const ProductPage = async ({ params }: Props) => {
     const { slug } = params;
 
     const product = productinfo.find((item) => item.slug === slug);
@@ -29,8 +29,7 @@ const ProductPage = ({ params }: Props) => {
                 <Image
                     src={product.imageUrl}
                     alt={product.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     className="rounded-xl"
                     priority
                 />
