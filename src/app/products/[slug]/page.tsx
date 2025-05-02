@@ -1,18 +1,18 @@
+// src/app/products/[slug]/page.tsx
+
 import Image from "next/image";
 import { productinfo } from "@/data";
 import { FaCartPlus } from "react-icons/fa";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-// ✅ Correct PageProps type as required by Next.js App Router
 interface PageProps {
     params: {
         slug: string;
     };
 }
 
-const ProductPage = async ({ params }: PageProps) => {
+export default function ProductPage({ params }: PageProps) {
     const { slug } = params;
-
     const product = productinfo.find((item) => item.slug === slug);
 
     if (!product) {
@@ -25,7 +25,6 @@ const ProductPage = async ({ params }: PageProps) => {
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Image */}
             <div className="w-full h-[400px] relative rounded-xl overflow-hidden shadow-md">
                 <Image
                     src={product.imageUrl}
@@ -36,7 +35,6 @@ const ProductPage = async ({ params }: PageProps) => {
                 />
             </div>
 
-            {/* Info */}
             <div className="space-y-4">
                 <h1 className="text-4xl font-bold text-gray-800">
                     {product.title}
@@ -62,7 +60,6 @@ const ProductPage = async ({ params }: PageProps) => {
                     ))}
                 </ul>
 
-                {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                     <button className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all text-lg font-medium">
                         <FaCartPlus className="text-xl" />
@@ -76,6 +73,4 @@ const ProductPage = async ({ params }: PageProps) => {
             </div>
         </div>
     );
-};
-
-export default ProductPage;
+}
